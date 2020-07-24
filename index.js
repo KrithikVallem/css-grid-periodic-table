@@ -8,17 +8,10 @@ class elementContainer {
     }
 
     makeElementDiv() {
-        const innerHtml = 
-        `
-          <p>${this.number}</p>
-          <br/>
-          <strong>${this.symbol}</strong> 
-        `;
-
         const div = document.createElement("div");
         div.classList.add("elementDiv");
-        div.id = `element-${this.number}`;
-        div.innerHTML = innerHtml;
+        div.id = `element-${this.symbol}`;
+        div.textContent = this.symbol;
 
         const tableContainer = document.querySelector("#tableContainer");
         tableContainer.appendChild(div);
