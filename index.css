@@ -10,8 +10,47 @@ body {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
 }
+.elementDiv:hover {
+    background-color: gray;
+}
 
+/* todo - use grid template areas */
 #tableContainer {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
+
+
+#empty-space-row-1 {
+    grid-area: 1 / 2 / span 1 / -2;
+    background-color: blue;
+}
+#empty-space-row-2-3 {
+    grid-area: 2 / 3 / 4 / span 10;
+    background-color: red;
+}
+#empty-space-row-6 {
+    grid-area: 6 / 3 / span 1 / span 1;
+    text-align: center;
+    vertical-align: middle;
+    background-color: pink;
+}
+#empty-space-row-7 {
+    grid-area: 7 / 3 / span 1 / span 1;
+    text-align: center;
+    background-color: purple;
+}
+#empty-space-row-8 {
+    grid-area: 8 / 1 / span 1 / -1;
+    background-color: green;
+}
+.lanthanide {
+    color: pink;
+    grid-row: 9;
+}
+.actinide {
+    color: yellow;
+    grid-row: 10;
 }
