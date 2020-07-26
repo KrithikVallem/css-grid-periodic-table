@@ -5,52 +5,78 @@ body {
 
 .elementDiv {
     border: solid 1px white;
-    font-weight: bold;
-    border-radius: 4px;
+    border-radius: 3px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .elementDiv:hover {
     background-color: gray;
 }
 
-/* todo - use grid template areas */
+.element-number {
+    
+}
+.element-symbol {
+    
+}
+.element-name {
+    
+}
+
 #tableContainer {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 9vh);
+    width: 95vw;
+    height: 95vh;
 }
-
-
 
 #empty-space-row-1 {
     grid-area: 1 / 2 / span 1 / -2;
-    background-color: blue;
 }
 #empty-space-row-2-3 {
     grid-area: 2 / 3 / 4 / span 10;
-    background-color: red;
 }
 #empty-space-row-6 {
     grid-area: 6 / 3 / span 1 / span 1;
-    text-align: center;
-    vertical-align: middle;
-    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #empty-space-row-7 {
     grid-area: 7 / 3 / span 1 / span 1;
-    text-align: center;
-    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #empty-space-row-8 {
     grid-area: 8 / 1 / span 1 / -1;
-    background-color: green;
 }
+#empty-space-row-9-left {
+    grid-area: 9 / 1 / span 1 / span 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+#empty-space-row-10-left{
+    grid-area: 10 / 1 / span 1 / span 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+#empty-space-row-9-10-right {
+    grid-area: 9 / -2 / span 2 / span 1;
+}
+
 .lanthanide {
-    color: pink;
     grid-row: 9;
 }
 .actinide {
-    color: yellow;
     grid-row: 10;
 }

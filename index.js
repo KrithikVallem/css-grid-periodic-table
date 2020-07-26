@@ -13,7 +13,22 @@ class elementContainer {
         div.classList.add("elementDiv");
         div.classList.add(this.group);
         div.id = this.symbol;
-        div.textContent = this.symbol;
+
+        const number = document.createElement("div");
+        number.classList.add("element-number");
+        number.textContent = this.number;
+
+        const symbol = document.createElement("div");
+        symbol.classList.add("element-symbol");
+        symbol.textContent = this.symbol;
+
+        const name = document.createElement("div");
+        name.classList.add("element-name");
+        name.textContent = this.name;
+
+        div.appendChild(number);
+        div.appendChild(symbol);
+        //div.appendChild(name);
 
         const tableContainer = document.querySelector("#tableContainer");
         tableContainer.appendChild(div);
