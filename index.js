@@ -5,7 +5,8 @@ class elementContainer {
         this.name = name;
         this.number = number;
         this.symbol = symbol;
-        this.group = group.replace(/ /g, "-");
+        // regex removes spaces and replaces them with dashes to make valid css class
+        this.group = group.startsWith("unknown") ? "unknown" : group.replace(/ /g, "-");
     }
 
     makeElementDiv() {
@@ -28,7 +29,7 @@ class elementContainer {
 
         div.appendChild(number);
         div.appendChild(symbol);
-        //div.appendChild(name);
+        div.appendChild(name);
 
         const tableContainer = document.querySelector("#tableContainer");
         tableContainer.appendChild(div);

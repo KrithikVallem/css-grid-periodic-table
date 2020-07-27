@@ -1,10 +1,41 @@
-body {
-    background-color: black;
-    color: white;
+:root {
+    --background: #153849;
+    --text: navy;
+
+    --diatomic-nonmetal: darkSeaGreen;
+    --noble-gas: burlyWood;
+    --alkali-metal: coral;
+    --alkaline-earth-metal: lightpink;
+    --metalloid: plum;
+    --polyatomic-nonmetal: sienna;
+    --post-transition-metal: yellowGreen;
+    --transition-metal: goldenRod;
+    --lanthanide: paleVioletRed;
+    --actinide: skyBlue;
+    --unknown: olive;
 }
 
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#tableContainer {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(11, 9vh);
+    grid-gap: 5px;
+    width: 95vw;
+    height: 10px;
+}
+
+
 .elementDiv {
-    border: solid 1px white;
     border-radius: 3px;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -12,28 +43,23 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden; 
 }
 .elementDiv:hover {
-    background-color: gray;
+    background-color: white;
 }
+
 
 .element-number {
-    
+    font-size: 0.5em;
 }
 .element-symbol {
-    
+    font-weight: bold;
 }
 .element-name {
-    
+    font-size: 7px;
 }
 
-#tableContainer {
-    display: grid;
-    grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(10, 9vh);
-    width: 95vw;
-    height: 95vh;
-}
 
 #empty-space-row-1 {
     grid-area: 1 / 2 / span 1 / -2;
@@ -46,12 +72,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--lanthanide);
 }
 #empty-space-row-7 {
     grid-area: 7 / 3 / span 1 / span 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--actinide);
 }
 #empty-space-row-8 {
     grid-area: 8 / 1 / span 1 / -1;
@@ -62,6 +90,7 @@ body {
     justify-content: flex-end;
     align-items: center;
     padding-right: 10px;
+    color: var(--lanthanide);
 }
 #empty-space-row-10-left{
     grid-area: 10 / 1 / span 1 / span 2;
@@ -69,14 +98,60 @@ body {
     justify-content: flex-end;
     align-items: center;
     padding-right: 10px;
+    color: var(--actinide);
 }
 #empty-space-row-9-10-right {
     grid-area: 9 / -2 / span 2 / span 1;
 }
+#empty-space-row-11 {
+    grid-area: 11 / 1 / -1 / -1;
+}
+
+
+.diatomic-nonmetal {
+    background-color: var(--diatomic-nonmetal);
+}
+.noble-gas {
+    background-color: var(--noble-gas);
+}
+.alkali-metal {
+    background-color: var(--alkali-metal);
+}
+.alkaline-earth-metal {
+    background-color: var(--alkaline-earth-metal);
+}
+.metalloid {
+    background-color: var(--metalloid);
+}
+.polyatomic-nonmetal {
+    background-color: var(--polyatomic-nonmetal);
+}
+.post-transition-metal {
+    background-color: var(--post-transition-metal);
+}
+.transition-metal {
+    background-color: var(--transition-metal);
+}
+.unknown {
+    background-color: var(--unknown);
+}
+
 
 .lanthanide {
     grid-row: 9;
+    background-color: var(--lanthanide);
 }
 .actinide {
     grid-row: 10;
+    background-color: var(--actinide);
+}
+
+
+@media (max-width: 750px) {
+    .element-name {
+        display: none;
+    }
+    .elementDiv {
+        padding: 10px;
+    }
 }
