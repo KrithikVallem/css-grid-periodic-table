@@ -167,6 +167,12 @@ body {
 }
 
 
+#wikiBox {
+    display: none;
+    position: relative;
+}
+
+
 @media (max-width: 750px) {
     .element-name, .element-number {
         display: none;
