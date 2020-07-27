@@ -169,7 +169,25 @@ body {
 
 #wikiBox {
     display: none;
-    position: relative;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+#wikiBox > iframe {
+    width: 90vw;
+    height: 90vh;
+    border-radius: 2px;
+}
+#closeBtn {
+    background-color: coral;
+    color: var(--background);
+    border: none;
+    border-radius: 2px;
+    width: 30vw;
+    height: 5vh;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 

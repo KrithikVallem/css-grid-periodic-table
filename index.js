@@ -31,7 +31,7 @@ class elementContainer {
         div.appendChild(symbol);
         div.appendChild(name);
 
-        div.onclick = toggleWikiBox;
+        div.onclick = toggleWikiBox.bind(this);
 
         const tableContainer = document.querySelector("#tableContainer");
         tableContainer.appendChild(div);
@@ -46,8 +46,9 @@ function toggleWikiBox() {
         document.querySelector("#wikiBox").style.display = "none";  
     }
     else {
+        document.querySelector("#wikiBox > iframe").src = `https://en.m.wikipedia.org/wiki/${this.name}`;
         document.querySelector("#tableContainer").style.display = "none";
-        document.querySelector("#wikiBox").style.display = "block";  
+        document.querySelector("#wikiBox").style.display = "flex";
     }
 }
 
